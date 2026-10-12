@@ -9,6 +9,7 @@ class HealthHandler(BaseHTTPRequestHandler):
             uptime = round(time.monotonic() - START_TIME, 2)
             body = json.dumps({
                 "status": "ok",
+                "version": "1.0.0",
                 "service": "health-service",
                 "uptime_seconds": uptime
             }).encode()
